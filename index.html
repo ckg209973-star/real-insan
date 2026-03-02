@@ -5,24 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>REAL INSAN</title>
 
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1290264619641486');
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1290264619641486&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
+<!-- Telegram Icon CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -70,29 +54,48 @@ h1{
     margin-bottom:30px;
 }
 
+/* Join Button */
 .join-btn{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
     background: linear-gradient(45deg, #00c6ff, #0072ff);
     color:#fff;
-    padding:15px 25px;
+    padding:15px 30px;
     border-radius:50px;
     font-size:16px;
     font-weight:600;
     text-decoration:none;
-    box-shadow:0 0 20px rgba(0,114,255,0.7);
     transition:0.3s;
     opacity:0.6;
     pointer-events:none;
 }
 
+.join-btn i{
+    font-size:18px;
+}
+
+/* Active State */
 .join-btn.active{
     opacity:1;
     pointer-events:auto;
+    animation: pulse 1.5s infinite;
+    box-shadow:0 0 15px #00c6ff,
+               0 0 30px #0072ff,
+               0 0 45px #00c6ff;
 }
 
-.join-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 30px rgba(0,114,255,1);
+/* Hover */
+.join-btn.active:hover{
+    transform:scale(1.1);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.92); }
+    100% { transform: scale(1); }
 }
 
 #countdown{
@@ -141,7 +144,8 @@ h1{
        class="join-btn" 
        id="joinBtn"
        target="_blank">
-        🚀 Join Telegram Channel
+        <i class="fab fa-telegram-plane"></i>
+        Join Telegram Channel
     </a>
 
     <div id="countdown">
@@ -149,9 +153,7 @@ h1{
     </div>
 
     <div class="disclaimer">
-        Disclaimer: This channel is strictly for educational and informational purposes only. 
-        No investment advice, tips, or guaranteed returns are provided. 
-        Financial markets involve risk. Please consult a registered financial advisor before making decisions.
+        Disclaimer: This channel is strictly for educational purposes only.
     </div>
 
     <div class="ad-box">
