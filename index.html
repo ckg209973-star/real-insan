@@ -15,19 +15,16 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1290264619641486');
 fbq('track', 'PageView');
 </script>
+
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1290264619641486&ev=PageView&noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
-
-<!-- Telegram Icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -38,107 +35,83 @@ src="https://www.facebook.com/tr?id=1290264619641486&ev=PageView&noscript=1"/>
 }
 
 body{
-    background: linear-gradient(to bottom, #1e2f44, #243c57);
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
-    padding:20px;
+    background: linear-gradient(135deg,#1e2f44,#2d4159);
 }
 
 .card{
+    width:90%;
+    max-width:380px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
-    border-radius:20px;
-    padding:50px 25px;
+    border-radius:25px;
+    padding:30px 20px;
     text-align:center;
-    width:100%;
-    max-width:400px;
+    color:#fff;
     box-shadow:0 10px 30px rgba(0,0,0,0.4);
     border:1px solid rgba(255,255,255,0.1);
 }
 
-h1{
-    color:#fff;
-    font-size:26px;
-    margin-bottom:15px;
+.card h1{
+    font-size:28px;
     font-weight:700;
+    margin-bottom:15px;
 }
 
-.desc{
-    color:#d7e3f4;
-    font-size:14px;
+.card p{
+    font-size:16px;
     line-height:1.6;
-    margin-bottom:30px;
+    color:#dcdcdc;
 }
 
-/* Join Button */
 .join-btn{
+    margin:25px 0 15px;
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:10px;
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
-    color:#fff;
-    padding:15px 30px;
+    padding:18px 25px;
+    width:100%;
     border-radius:50px;
-    font-size:16px;
-    font-weight:600;
     text-decoration:none;
-    transition:0.3s;
-    opacity:0.6;
-    pointer-events:none;
-}
-
-.join-btn i{
     font-size:18px;
-}
-
-.join-btn.active{
-    opacity:1;
-    pointer-events:auto;
-    animation: pulse 1.5s infinite;
-    box-shadow:0 0 15px #00c6ff,
-               0 0 30px #0072ff,
-               0 0 45px #00c6ff;
-}
-
-.join-btn.active:hover{
-    transform:scale(1.1);
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.92); }
-    100% { transform: scale(1); }
-}
-
-#countdown{
-    margin-top:15px;
-    font-size:16px;
     font-weight:600;
+    color:#fff;
+    background: linear-gradient(90deg,#1fa2ff,#12d8fa,#1fa2ff);
+    background-size:200% 200%;
+    transition:0.5s;
+}
+
+.join-btn:hover{
+    background-position:right;
+    transform:scale(1.05);
+}
+
+.countdown{
     color:#ff4d4d;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:20px;
 }
 
 .disclaimer{
-    margin-top:30px;
-    font-size:12px;
-    color:#cdd9e5;
-    line-height:1.6;
-    opacity:0.8;
+    font-size:14px;
+    color:#cfcfcf;
+    margin-bottom:20px;
 }
 
-.ad-box{
-    margin-top:20px;
-    padding:10px;
-    background: rgba(0,0,0,0.3);
-    border-radius:10px;
-    font-size:13px;
+.ads-box{
+    background:#1b2a3a;
+    padding:15px;
+    border-radius:15px;
+    font-size:16px;
 }
 
-.ad-box a{
-    color:#00c6ff;
+.ads-box a{
     text-decoration:none;
+    color:#00c3ff;
     font-weight:600;
 }
 </style>
@@ -147,40 +120,47 @@ h1{
 <body>
 
 <div class="card">
-
     <h1>REAL INSAN</h1>
 
-    <p class="desc">
-        I am Cricket Analyst 🏏 Free Cricket Prediction ✅ <br>
+    <p>
+        I am Cricket Analyst 🏏<br>
+        Free Cricket Prediction ✅<br>
         Always time my prediction top level every league or tournament 🔥
     </p>
 
-    <a href="https://t.me/+Kbs_HFvibPwzMmNl" 
-       class="join-btn" 
-       id="joinBtn"
-       target="_blank">
-        <i class="fab fa-telegram-plane"></i>
-        Join Telegram Channel
+    <a href="https://t.me/+Kbs_HFvibPwzMmNl" target="_blank" class="join-btn">
+        📩 Join Telegram Channel
     </a>
 
-    <div id="countdown">
-        Please wait 10 seconds...
+    <div class="countdown">
+        Please wait <span id="time">10</span> seconds...
     </div>
 
     <div class="disclaimer">
         Disclaimer: This channel is strictly for educational purposes only.
     </div>
 
-    <div class="ad-box">
-        Ads By 
+    <div class="ads-box">
         <a href="https://t.me/+_ldYCcyc-qwwODU1" target="_blank">
-            Ck Ads Agancy
+            Ads By Ck Ads Agancy
         </a>
     </div>
-
 </div>
 
 <script>
 let timeLeft = 10;
-let countdownElement = document.getElementById("countdown");
-let joinBtn = document.getElementById("joinBtn");
+let timer = document.getElementById("time");
+
+let countdown = setInterval(function(){
+    timeLeft--;
+    timer.textContent = timeLeft;
+
+    if(timeLeft <= 0){
+        clearInterval(countdown);
+        timer.textContent = "0";
+    }
+},1000);
+</script>
+
+</body>
+</html>
