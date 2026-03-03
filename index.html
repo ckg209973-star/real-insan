@@ -19,7 +19,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1290264619641486');
 fbq('track', 'PageView');
 </script>
-
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1290264619641486&ev=PageView&noscript=1"/>
@@ -31,7 +30,7 @@ src="https://www.facebook.com/tr?id=1290264619641486&ev=PageView&noscript=1"/>
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -39,80 +38,73 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background: linear-gradient(135deg,#1e2f44,#2d4159);
+    background:linear-gradient(135deg,#1f2f46,#2d3f57);
 }
 
 .card{
     width:90%;
-    max-width:380px;
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    border-radius:25px;
+    max-width:400px;
     padding:30px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
     text-align:center;
-    color:#fff;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    border:1px solid rgba(255,255,255,0.1);
+    color:white;
 }
 
 .card h1{
-    font-size:28px;
-    font-weight:700;
-    margin-bottom:15px;
+    font-size:32px;
+    margin-bottom:20px;
 }
 
 .card p{
-    font-size:16px;
-    line-height:1.6;
-    color:#dcdcdc;
+    font-size:18px;
+    line-height:28px;
+    margin-bottom:10px;
+    opacity:0.9;
 }
 
 .join-btn{
-    margin:25px 0 15px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+    display:inline-block;
+    margin-top:20px;
     padding:18px 25px;
     width:100%;
     border-radius:50px;
     text-decoration:none;
-    font-size:18px;
-    font-weight:600;
-    color:#fff;
-    background: linear-gradient(90deg,#1fa2ff,#12d8fa,#1fa2ff);
-    background-size:200% 200%;
-    transition:0.5s;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    background:linear-gradient(90deg,#2ea7ff,#29d2c9);
+    transition:0.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .join-btn:hover{
-    background-position:right;
     transform:scale(1.05);
 }
 
-.countdown{
-    color:#ff4d4d;
-    font-size:18px;
-    font-weight:600;
-    margin-bottom:20px;
+#countdown{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+    color:#ff5c5c;
 }
 
 .disclaimer{
+    margin-top:15px;
     font-size:14px;
-    color:#cfcfcf;
-    margin-bottom:20px;
+    opacity:0.8;
 }
 
-.ads-box{
-    background:#1b2a3a;
-    padding:15px;
-    border-radius:15px;
-    font-size:16px;
-}
-
-.ads-box a{
-    text-decoration:none;
-    color:#00c3ff;
-    font-weight:600;
+.bottom-box{
+    margin-top:25px;
+    padding:18px;
+    border-radius:20px;
+    background:#142436;
+    font-size:18px;
+    font-weight:bold;
+    color:#27c6ff;
 }
 </style>
 </head>
@@ -122,42 +114,37 @@ body{
 <div class="card">
     <h1>REAL INSAN</h1>
 
-    <p>
-        I am Cricket Analyst 🏏<br>
-        Free Cricket Prediction ✅<br>
-        Always time my prediction top level every league or tournament 🔥
-    </p>
+    <p>I am Cricket Analyst 🏏</p>
+    <p>Free Cricket Prediction ✅</p>
+    <p>Always time my prediction top level<br>
+    every league or tournament 🔥</p>
 
     <a href="https://t.me/+Kbs_HFvibPwzMmNl" target="_blank" class="join-btn">
         📩 Join Telegram Channel
     </a>
 
-    <div class="countdown">
-        Please wait <span id="time">10</span> seconds...
-    </div>
+    <div id="countdown">Please wait 9 seconds...</div>
 
     <div class="disclaimer">
         Disclaimer: This channel is strictly for educational purposes only.
     </div>
 
-    <div class="ads-box">
-        <a href="https://t.me/+_ldYCcyc-qwwODU1" target="_blank">
-            Ads By Ck Ads Agancy
-        </a>
+    <div class="bottom-box">
+        Free Paid Report Cricket Updates Funny Memes
     </div>
 </div>
 
 <script>
-let timeLeft = 10;
-let timer = document.getElementById("time");
+let timeLeft = 9;
+let countdown = document.getElementById("countdown");
 
-let countdown = setInterval(function(){
+let timer = setInterval(function(){
     timeLeft--;
-    timer.textContent = timeLeft;
-
+    countdown.innerHTML = "Please wait " + timeLeft + " seconds...";
+    
     if(timeLeft <= 0){
-        clearInterval(countdown);
-        timer.textContent = "0";
+        clearInterval(timer);
+        countdown.innerHTML = "You can join now!";
     }
 },1000);
 </script>
