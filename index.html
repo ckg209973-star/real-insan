@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>REAL INSAN</title>
 
-<!-- Facebook Pixel Code -->
+<!-- Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -13,140 +13,165 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1290264619641486');
 fbq('track', 'PageView');
 </script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1290264619641486&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#1f2f46,#2d3f57);
+margin:0;
+font-family:Arial;
+background: linear-gradient(135deg,#cfe9e3,#e7d8a5);
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
 }
 
 .card{
-    width:90%;
-    max-width:400px;
-    padding:30px 20px;
-    border-radius:25px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.4);
-    text-align:center;
-    color:white;
+background:#fff;
+width:330px;
+padding:40px 25px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
 }
 
-.card h1{
-    font-size:32px;
-    margin-bottom:20px;
+h1{
+color:#2d4ea3;
+font-size:36px;
+margin-bottom:10px;
 }
 
-.card p{
-    font-size:18px;
-    line-height:28px;
-    margin-bottom:10px;
-    opacity:0.9;
+.desc{
+color:#666;
+font-size:16px;
+margin-bottom:20px;
 }
 
-.join-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:18px 25px;
-    width:100%;
-    border-radius:50px;
-    text-decoration:none;
-    font-size:20px;
-    font-weight:bold;
-    color:white;
-    background:linear-gradient(90deg,#2ea7ff,#29d2c9);
-    transition:0.4s;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+.btn{
+display:inline-block;
+background:#2f56d6;
+color:white;
+text-decoration:none;
+padding:16px 26px;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+width:85%;
+animation: glowZoom 2s infinite;
 }
 
-.join-btn:hover{
-    transform:scale(1.05);
+@keyframes glowZoom{
+
+0%{
+transform:scale(1);
+box-shadow:0 0 10px rgba(47,86,214,0.6);
 }
 
-#countdown{
-    margin-top:20px;
-    font-size:22px;
-    font-weight:bold;
-    color:#ff5c5c;
+50%{
+transform:scale(1.1);
+box-shadow:0 0 30px rgba(47,86,214,1);
 }
 
-.disclaimer{
-    margin-top:15px;
-    font-size:14px;
-    opacity:0.8;
+100%{
+transform:scale(1);
+box-shadow:0 0 10px rgba(47,86,214,0.6);
 }
 
-.bottom-box{
-    margin-top:25px;
-    padding:18px;
-    border-radius:20px;
-    background:#142436;
-    font-size:18px;
-    font-weight:bold;
-    color:#27c6ff;
 }
+
+.countdown{
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
+color:#ff3b3b;
+}
+
+.list{
+text-align:left;
+margin-top:25px;
+padding-left:30px;
+}
+
+.list li{
+margin:12px 0;
+list-style:none;
+position:relative;
+}
+
+.list li:before{
+content:"✔";
+position:absolute;
+left:-25px;
+font-weight:bold;
+}
+
+.footer{
+margin-top:25px;
+font-size:12px;
+color:#aaa;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="card">
-    <h1>REAL INSAN</h1>
 
-    <p>I am Cricket Analyst 🏏</p>
-    <p>Free Cricket Prediction ✅</p>
-    <p>Always time my prediction top level<br>
-    every league or tournament 🔥</p>
+<h1>REAL INSAN</h1>
 
-    <a href="https://t.me/+Kbs_HFvibPwzMmNl" target="_blank" class="join-btn">
-        📩 Join Telegram Channel
-    </a>
+<p class="desc">
+Smart match perspective & clean insights — everything simplified for serious sports followers.
+</p>
 
-    <div id="countdown">Please wait 9 seconds...</div>
+<a onclick="trackJoin()" href="https://t.me/+Kbs_HFvibPwzMmNl" class="btn">
+📲 Join on Telegram
+</a>
 
-    <div class="disclaimer">
-        Disclaimer: This channel is strictly for educational purposes only.
-    </div>
+<div class="countdown">
+Offer closing in <span id="time">10</span> sec
+</div>
 
-    <div class="bottom-box">
-        Free Paid Report Cricket Updates Funny Memes
-    </div>
+<ul class="list">
+<li>Daily Match Insights</li>
+<li>Strong Pre-match Logic</li>
+<li>High Accuracy Reads</li>
+<li>Free Access Limited Time</li>
+</ul>
+
+<div class="footer">
+© 2025 Market Load King | All Rights Reserved <br>
+Ads By Abhishek Ads Agency
+</div>
+
 </div>
 
 <script>
-let timeLeft = 9;
-let countdown = document.getElementById("countdown");
 
-let timer = setInterval(function(){
-    timeLeft--;
-    countdown.innerHTML = "Please wait " + timeLeft + " seconds...";
-    
-    if(timeLeft <= 0){
-        clearInterval(timer);
-        countdown.innerHTML = "You can join now!";
-    }
+var time=10;
+
+var timer=setInterval(function(){
+
+time--;
+
+document.getElementById("time").innerHTML=time;
+
+if(time<=0){
+clearInterval(timer);
+}
+
 },1000);
+
+function trackJoin(){
+fbq('track','Lead');
+}
+
 </script>
 
 </body>
