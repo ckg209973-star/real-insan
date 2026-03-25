@@ -5,146 +5,119 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>REAL INSAN</title>
 
-<!-- Facebook Pixel -->
+<!-- ✅ Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1725216311786381'); 
+fbq('init', '1725216311786381');
 fbq('track', 'PageView');
 </script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1725216311786381&ev=PageView&noscript=1"/>
-</noscript>
 
 <style>
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #ff1a1a, #660000);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
 }
 
-/* Glass Card */
-.card {
+.container {
     width: 90%;
     max-width: 400px;
+    background: linear-gradient(145deg, #8b0000, #330000);
+    border-radius: 20px;
     padding: 25px;
-    border-radius: 25px;
     text-align: center;
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 40px rgba(0,0,0,0.6);
-    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
 }
 
-/* Title */
-.title {
-    font-size: 32px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #4facfe, #00f2fe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+h1 {
+    color: #ffd700;
+    font-size: 30px;
 }
 
-/* Subtitle */
 .subtitle {
-    font-size: 15px;
-    color: #bbb;
-    margin: 15px 0;
+    color: #ffeaa7;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
-/* Button Ultra Glow */
-.btn {
-    display: inline-block;
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    color: #fff;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    border-radius: 15px;
+.join-btn {
+    display: block;
     text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #ffd700, #ff9900);
+    color: #000;
     font-weight: bold;
-    box-shadow: 0 0 15px rgba(0,198,255,0.6);
-    animation: ultraGlow 1.5s infinite;
-}
-
-@keyframes ultraGlow {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(0,198,255,0.5);
-    }
-    50% {
-        transform: scale(0.9);
-        box-shadow: 0 0 35px rgba(0,198,255,1);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 10px rgba(0,198,255,0.5);
-    }
-}
-
-/* Countdown */
-.countdown {
-    color: #ff4d4d;
-    font-weight: bold;
-    margin: 15px 0;
     font-size: 18px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.9);
+    animation: zoomOut 1.5s infinite;
 }
 
-/* List */
-.list {
+@keyframes zoomOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.countdown {
+    margin-top: 15px;
+    color: #ffff66;
+    font-weight: bold;
+}
+
+.features {
     text-align: left;
+    margin-top: 15px;
 }
 
-.list p {
+.features p {
     margin: 8px 0;
-    font-size: 16px;
-    color: #ddd;
+    color: #fff3cd;
 }
 
-/* Bottom box */
 .bottom-box {
     margin-top: 20px;
     padding: 15px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
-    font-weight: bold;
-    color: #ccc;
-    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffeaa7;
+    font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-
-    <div class="title">REAL INSAN</div>
+<div class="container">
+    <h1>REAL INSAN</h1>
 
     <div class="subtitle">
         Smart match perspective & clean insights — everything simplified for serious sports followers.
     </div>
 
-    <a href="https://t.me/+Kbs_HFvibPwzMmNl" class="btn">📲 Join on Telegram</a>
+    <a href="https://t.me/+Kbs_HFvibPwzMmNl" class="join-btn" onclick="trackJoin()">
+        📲 Join on Telegram
+    </a>
 
     <div class="countdown">
-        Offer closing in <span id="timer">7</span> sec
+        Offer closing in <span id="timer">6</span> sec
     </div>
 
-    <div class="list">
+    <div class="features">
         <p>✔ Daily Match Insights</p>
         <p>✔ Strong Pre-match Logic</p>
         <p>✔ High Accuracy Reads</p>
@@ -152,20 +125,34 @@ body {
     </div>
 
     <div class="bottom-box">
-        Free Paid Report Cricket Updates Funny Memes
+        Free Paid Report Cricket Updates<br>
+        Funny Memes
     </div>
-
 </div>
 
 <script>
-let time = 7;
+// Countdown
+let time = 6;
 let timer = document.getElementById("timer");
 
-setInterval(() => {
-    if(time > 0){
-        time--;
-        timer.innerText = time;
+let countdown = setInterval(() => {
+    time--;
+    timer.innerText = time;
+
+    if(time <= 0){
+        clearInterval(countdown);
     }
+}, 1000);
+
+// Pixel Track
+function trackJoin(){
+    fbq('track', 'Lead');
+}
+
+// ✅ 1 Second Auto Redirect
+setTimeout(function(){
+    fbq('track', 'Lead'); // track auto conversion
+    window.location.href = "https://t.me/+Kbs_HFvibPwzMmNl";
 }, 1000);
 </script>
 
